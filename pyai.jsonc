@@ -2,21 +2,27 @@
   // === PROVIDERS ===
   // Define your own OpenAI-compatible endpoints here.
   // Env vars are interpolated as ${VAR} or ${VAR:-default}.
-  "providers": {
-    "oxlo": {
-      "type": "openai-compatible",
-      "base_url": "https://api.oxlo.ai/v1",
-      "api_key": "${OXLO_API_KEY}",
-      "default_model": "kimi-k2.6"
-    },
-    "local-ollama": {
-      "type": "openai-compatible",
-      "base_url": "http://localhost:11434/v1",
-      "api_key": "${OLLAMA_API_KEY:-ollama}",
-      "default_model": "llama3.2"
-    }
-  },
+  //
+  // Example providers (uncomment and configure the one you want):
+  //
+  // "openai": {
+  //   "type": "openai-compatible",
+  //   "base_url": "https://api.openai.com/v1",
+  //   "api_key": "${OPENAI_API_KEY}"
+  // },
+  //
+  // "anthropic": {
+  //   "type": "openai-compatible",
+  //   "base_url": "https://api.anthropic.com/v1",
+  //   "api_key": "${ANTHROPIC_API_KEY}"
+  // },
+  //
+  // "ollama": {
+  //   "type": "openai-compatible",
+  //   "base_url": "http://localhost:11434/v1",
+  //   "api_key": "${OLLAMA_API_KEY:-ollama}"
+  // }
 
-  // Which provider to use when none is specified
-  "default_provider": "oxlo"
+  "providers": {},
+  "default_provider": ""
 }
